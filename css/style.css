@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Cuprum|Roboto+Slab|Ubuntu&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #EBECED;
+  overflow-y: hidden;
+  height: 100%; }
+
+.innerContainer > a, .logoSlogan > a {
+  text-decoration: none; }
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  background-color: #323334;
+  color: #EBECED;
+  min-height: 48px; }
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 1024px;
+  height: 32px; }
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: auto; }
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  text-align: center;
+  height: 32px;
+  width: 32px;
+  background: white;
+  border: 1px solid #EBECED;
+  border-radius: 3px 3px 3px 3px; }
+
+#logo {
+  height: 16px;
+  width: 16px;
+  color: #323334;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: none;
+  padding: 0;
+  margin: 0 auto 0 auto; }
+
+.logoSlogan {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 32px;
+  margin: auto .8em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300; }
+
+#slogan {
+  font-size: 1.3em;
+  color: #EBECED; }
+
+#sloganH {
+  font-weight: bold;
+  color: #97BC97; }
+
+#logButton, #signButton {
+  height: 23px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-left: .3em;
+  padding: 0 .5em;
+  border: 1px solid #EBECED;
+  border-radius: 3px;
+  background-color: #323334;
+  cursor: pointer; }
+
+#logButton > img, #signButton > img {
+  height: 16px;
+  width: 16px;
+  padding-left: .3em; }
+
+#logButton > span, #signButton > span {
+  font-family: 'Roboto Slab', serif;
+  color: #EBECED; }
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  height: 23px; }
+
+.navContainer > ul {
+  display: inline-flex;
+  justify-content: center;
+  list-style: none;
+  height: 23px;
+  padding: 0 1em; }
+
+.navContainer > ul > li {
+  justify-content: space-around;
+  margin: auto .5em; }
+
+.navContainer > ul > li > a {
+  color: #EBECED;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none; }
+
+.navContainer > ul > li > a:hover {
+  color: #97BC97;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline; }
+
+.logContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 .5em;
+  border-left: 2px solid #97BC97; }
+
+.logContainer > a {
+  text-decoration: none;
+  color: #EBECED;
+  font-family: 'Roboto Slab', serif; }
+
+.logForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.logForm > input[name="loginBar"],
+.logForm > input[name="pwdBar"] {
+  border: 2px solid #97BC97;
+  border-radius: 3px;
+  background-color: #EBECED;
+  width: 80px;
+  margin: auto .3em;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; }
+
+#signButton:hover, #logButton:hover {
+  border: 1px solid #97BC97;
+  border-radius: 3px;
+  background-color: #323334;
+  color: #97BC97; }
+
+.logForm > input[name="loginBar"]:focus,
+.logForm > input[name="pwdBar"]:focus {
+  outline: none; }
+
+#menuContainer {
+  display: none;
+  align-items: center; }
+
+#menuContainer > a {
+  display: flex;
+  align-self: center;
+  text-align: center; }
+
+#menuContainer > a > img {
+  max-height: 36px;
+  max-width: 36px; }
+
+@media all and (max-width: 1024px) {
+  .navContainer, .logContainer {
+    display: none; }
+
+  .logoContainer {
+    margin-left: 2em; }
+
+  #menuContainer {
+    display: flex;
+    margin-right: 2em; } }
+
+/*# sourceMappingURL=style.css.map */

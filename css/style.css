@@ -71,27 +71,6 @@ html, body {
   font-weight: bold;
   color: #97BC97; }
 
-#logButton, #signButton {
-  height: 23px;
-  width: auto;
-  display: flex;
-  align-items: center;
-  margin-left: .3em;
-  padding: 0 .5em;
-  border: 1px solid #EBECED;
-  border-radius: 3px;
-  background-color: #323334;
-  cursor: pointer; }
-
-#logButton > img, #signButton > img {
-  height: 16px;
-  width: 16px;
-  padding-left: .3em; }
-
-#logButton > span, #signButton > span {
-  font-family: 'Roboto', sans-serif;
-  color: #EBECED; }
-
 .navContainer {
   display: flex;
   align-items: center;
@@ -139,31 +118,67 @@ html, body {
 
 .logForm > input[name="loginBar"],
 .logForm > input[name="pwdBar"] {
-  border: 2px solid #97BC97;
+  border: 3px solid #EBECED;
   border-radius: 3px;
   background-color: #EBECED;
+  transition: all .5s ease;
   width: 80px;
-  margin: auto .3em;
+  margin: auto 1em auto auto;
   text-align: center;
   font-family: 'Roboto', sans-serif; }
 
-#signButton:hover, #logButton:hover {
+.logForm > input[name="loginBar"]:focus,
+.logForm > input[name="pwdBar"]:focus {
+  outline: none;
+  border-color: #97BC97;
+  transition: border-color 1s ease; }
+
+.logForm > input[name="loginBar"]:focus {
+  width: 100px;
+  transition: width .5s ease; }
+
+.logForm > input[name="pwdBar"]:focus {
+  width: 120px;
+  transition: width .5s ease; }
+
+#logButton {
+  height: 23px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #EBECED;
+  border-radius: 3px;
+  background-color: #323334;
+  cursor: pointer; }
+
+#logButton > img {
+  height: 16px;
+  width: 16px;
+  margin-top: 2px; }
+
+#logButton > span {
+  font-family: 'Roboto', sans-serif;
+  color: #EBECED;
+  margin-right: .3em; }
+
+#logButton:hover {
   border: 1px solid #97BC97;
   border-radius: 3px;
   background-color: #323334;
-  color: #97BC97; }
+  color: #97BC97;
+  transition: all .3s ease; }
 
-.logForm > input[name="loginBar"]:focus,
-.logForm > input[name="pwdBar"]:focus {
-  outline: none; }
+.menuContainerAniIn {
+  transform: rotate(360deg);
+  transition: transform 1.5s ease; }
+
+.menuContainerAniOut {
+  transform: rotate(-360deg);
+  transition: transform 1.5s ease; }
 
 #menuContainer {
   display: flex;
   align-items: center; }
-
-.menuContainerAni {
-  transform: rotate(360deg);
-  transition: transform 1.5s ease; }
 
 #menuContainer > a {
   display: flex;
@@ -174,8 +189,11 @@ html, body {
   max-height: 23px;
   max-width: 23px; }
 
+@media all and (min-width: 1025px) {
+  .logContainer {
+    display: flex; } }
 @media all and (max-width: 1024px) {
-  .navContainer, .logContainer {
+  .logContainer {
     display: none; }
 
   .logoContainer {
@@ -184,8 +202,8 @@ html, body {
   #menuContainer {
     display: flex;
     margin-right: 2em; } }
-@media all and (max-width: 875px) {
-  .navContainer, .logContainer {
+@media all and (max-width: 600px) {
+  .logContainer, .navContainer {
     display: none; }
 
   #menuContainer {

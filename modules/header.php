@@ -32,10 +32,7 @@
         <input type="text" name="loginBar" placeholder="Login" autocomplete="off">
         <input type="password" name="pwdBar" placeholder="Password" autocomplete="off">
         <button type="submit" name="loginButton" id="logButton">
-          <span>Sign in</span><img src="assets/loginw.png" alt="Login">
-        </button>
-        <button type="submit" name="signButton" id="signButton">
-          <span>Sign up</span><img src="assets/signinw.png" alt="Login">
+          <span id="signIn">Login</span><img src="assets/loginw.png" alt="Login">
         </button>
       </form>
 

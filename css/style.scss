@@ -101,33 +101,6 @@ html, body{
   color: $hColor;
 }
 
-#logButton, #signButton{
-  height: 23px;
-  width: auto;
-
-  display: flex;
-  align-items: center;
-
-  margin-left: .3em;
-  padding: 0 .5em;
-
-  border: 1px solid $bgColor;
-  border-radius: 3px;
-  background-color: $mainColor;
-
-  cursor: pointer;
-}
-#logButton>img, #signButton>img{
-  height: 16px;
-  width: 16px;
-
-  padding-left: .3em;
-}
-#logButton>span, #signButton>span{
-  font-family: 'Roboto', sans-serif;
-  color: $bgColor;
-}
-
 .navContainer{
   display: flex;
   align-items: center;
@@ -182,30 +155,81 @@ html, body{
   display: flex;
   align-items: center;
   justify-content: space-around;
+
 }
 .logForm>input[name="loginBar"],
 .logForm>input[name="pwdBar"]{
-  border: 2px solid $hColor;
+  border: 3px solid $bgColor;
   border-radius: 3px;
   background-color: $bgColor;
 
+  transition: all .5s ease;
+
   width: 80px;
-  margin: auto .3em;
+  margin: auto 1em auto auto;
 
   text-align: center;
   font-family: 'Roboto', sans-serif;
-}
-#signButton:hover,#logButton:hover{
-  border: 1px solid $hColor;
-  border-radius: 3px;
-  background-color: $mainColor;
-
-  color: $hColor;
 }
 
 .logForm>input[name="loginBar"]:focus,
 .logForm>input[name="pwdBar"]:focus{
   outline: none;
+  border-color: $hColor;
+
+  transition: border-color 1s ease;
+}
+.logForm>input[name="loginBar"]:focus{
+  width: 100px;
+  transition: width .5s ease;
+}
+.logForm>input[name="pwdBar"]:focus{
+  width: 120px;
+  transition: width .5s ease;
+}
+
+#logButton{
+  height: 23px;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+
+  border: 1px solid $bgColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+
+  cursor: pointer;
+}
+#logButton>img{
+  height: 16px;
+  width: 16px;
+  margin-top: 2px;
+}
+#logButton>span{
+  font-family: 'Roboto', sans-serif;
+  color: $bgColor;
+  margin-right: .3em;
+}
+
+#logButton:hover{
+  border: 1px solid $hColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+
+  color: $hColor;
+  transition: all .3s ease;
+}
+
+
+.menuContainerAniIn{
+  transform: rotate(360deg);
+  transition: transform 1.5s ease;
+}
+.menuContainerAniOut{
+  transform: rotate(-360deg);
+  transition: transform 1.5s ease;
 }
 
 
@@ -214,13 +238,6 @@ html, body{
   display: flex;
   align-items: center;
 }
-
-.menuContainerAni{
-  transform: rotate(360deg);
-
-  transition: transform 1.5s ease;
-}
-
 #menuContainer>a{
   display: flex;
   align-self: center;
@@ -238,11 +255,16 @@ html, body{
 // DEIXAR POR ULTIMO
 // DEIXAR POR ULTIMO
 // DEIXAR POR ULTIMO
+@media all and (min-width: 1025px){
+.logContainer{
+    display: flex;
+  }
+}
 @media all and (max-width: 1024px){
-  .navContainer, .logContainer{
+.logContainer{
     display: none;
   }
-  .logoContainer{
+.logoContainer{
     margin-left: 2em;
   }
   #menuContainer{
@@ -250,9 +272,12 @@ html, body{
     margin-right: 2em;
   }
 }
-@media all and (max-width: 875px){
-  .navContainer, .logContainer{
+@media all and (max-width: 600px){
+.logContainer, .navContainer{
     display: none;
+  }
+.logoContainer{
+    // margin-left: 2em;
   }
   #menuContainer{
     display: flex;

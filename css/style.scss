@@ -124,14 +124,18 @@ html, body{
   padding-left: .3em;
 }
 #logButton>span, #signButton>span{
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
   color: $bgColor;
 }
 
 .navContainer{
   display: flex;
   align-items: center;
+
+  margin-right: 1em;
+
   height: 23px;
+  border-right: 2px solid $hColor;
 }
 .navContainer>ul{
   display: inline-flex;
@@ -156,20 +160,23 @@ html, body{
   color: $hColor;
 
   font-family: 'Roboto', sans-serif;
-  text-decoration: underline;
+  border-bottom: 3px solid $hColor;
+  transition: all .3s ease;
+
 }
+
 .logContainer{
   display: flex;
   align-items: center;
 
   // margin-left: auto;
+  margin-right: 1em;
   padding: 0 .5em;
-  border-left: 2px solid $hColor;
 }
 .logContainer>a{
   text-decoration: none;
   color: $bgColor;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
 }
 .logForm{
   display: flex;
@@ -201,18 +208,27 @@ html, body{
   outline: none;
 }
 
+
+
 #menuContainer{
-  display: none;
+  display: flex;
   align-items: center;
 }
+
+.menuContainerAni{
+  transform: rotate(360deg);
+
+  transition: transform 1.5s ease;
+}
+
 #menuContainer>a{
   display: flex;
   align-self: center;
   text-align: center;
 }
 #menuContainer>a>img{
-  max-height: 36px;
-  max-width: 36px;
+  max-height: 23px;
+  max-width: 23px;
 }
 
 
@@ -228,6 +244,15 @@ html, body{
   }
   .logoContainer{
     margin-left: 2em;
+  }
+  #menuContainer{
+    display: flex;
+    margin-right: 2em;
+  }
+}
+@media all and (max-width: 875px){
+  .navContainer, .logContainer{
+    display: none;
   }
   #menuContainer{
     display: flex;

@@ -15,7 +15,7 @@
 <div class="wrapper">
 
   <?php require ('modules/header.php') ?>
-
+  <?php require ('modules/content.php') ?>
 
 </div><!-- Wrapper -->
 

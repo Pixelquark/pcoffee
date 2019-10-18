@@ -19,10 +19,10 @@
 
     <div class="navContainer">
       <ul>
-        <li id="homeLink"><a href="">home</a></li>
-        <li id="profileLink"><a href="">profile</a></li>
-        <li id="projectsLink"><a href="">projects</a></li>
-        <li id="faqLink"><a href="">FAQ</a></li>
+        <li><a href="">home</a></li>
+        <li><a href="">projects</a></li>
+        <li><a href="">github</a></li>
+        <li><a href="">about</a></li>
       </ul>
     </div>
 
@@ -40,4 +40,7 @@
     <div id="menuContainer">
       <a href="#"><img src="assets/menu1.png" alt=""></a>
     </div>
+
+  </div>
+</div>
 <?php ?>

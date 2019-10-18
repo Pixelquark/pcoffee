@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cuprum|Roboto+Slab|Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cuprum|Roboto+Slab|Ubuntu:300,400&display=swap');
 // font-family: 'Ubuntu', sans-serif;
 // font-family: 'Cuprum', sans-serif;
 
@@ -12,9 +12,23 @@ html, body{
   padding: 0;
 
   color: $bgColor;
+  background-color: $bgColor;
+
+  background-color: white;
+  // background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23323334' fill-opacity='0.06' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 
   overflow-y: hidden;
   height: 100%;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
 }
 
 .innerContainer>a, .logoSlogan>a{
@@ -27,13 +41,14 @@ html, body{
   background-color: $mainColor;
   color: $bgColor;
 
+  width: 100%;
   min-height: 48px;
 }
 .innerContainer{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: relative;
+
 
   margin: auto;
   padding: 0;
@@ -125,14 +140,15 @@ html, body{
 .navContainer>ul>li>a{
   color: $bgColor;
 
-  font-family: 'Roboto', sans-serif;
+  font-weight:lighter;
+  font-family: 'Ubuntu', sans-serif;
   text-decoration: none;
 }
 
 .navContainer>ul>li>a:hover{
   color: $hColor;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   border-bottom: 3px solid $hColor;
   transition: all .3s ease;
 
@@ -248,9 +264,106 @@ html, body{
   max-width: 23px;
 }
 
+// CONTENT CONTENT
+// CONTENT CONTENT
+// CONTENT CONTENT
 
+.contentContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
 
+  width: auto;
+  height: 100%;
 
+  margin: 0 1em;
+  padding: 0;
+
+  color: $mainColor;
+
+  font-family: 'Roboto', sans-serif;
+}
+.postContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+  margin: 1em 1em;
+  padding: 0;
+
+  width: 1024px;
+  height: auto;
+
+  background-color: white;
+  border: hidden;
+  border-radius: 6px 6px 0 0;
+}
+
+.postTable{
+  width: 100%;
+
+  border: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-collapse: collapse;
+
+  background-color: $bgColor;
+}
+.tableRow{
+  height: 25px;
+}
+
+//TABLE HEADER
+.rowHeader{
+  background: #d1d1d1; 
+  color: $mainColor;
+}
+.tableHeader{
+  border-bottom: 1px;
+  border-left: 1px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
+
+  font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
+
+  height: 16px;
+}
+.tableHeader:hover{
+  color: $hColor;
+
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.firstCell{
+  border-top-left-radius: 6px;
+}
+.lastCell{
+  border-top-right-radius: 6px;
+}
+
+//TABLE CELL
+.tableCell{
+  font-size: .8em;
+  height: 20px;
+}
+#typeCell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: .15em;
+}
+.tableCell>img{
+  align-self: center;
+  height: 15px;
+  width: 15px;
+
+}
 
 // DEIXAR POR ULTIMO
 // DEIXAR POR ULTIMO
@@ -273,14 +386,17 @@ html, body{
   }
 }
 @media all and (max-width: 600px){
+.navContainer{
+  display: flex;
+}
 .logContainer, .navContainer{
     display: none;
   }
 .logoContainer{
-    // margin-left: 2em;
+    margin-left: 1em;
   }
   #menuContainer{
     display: flex;
-    margin-right: 2em;
+    margin-right: 1em;
   }
 }

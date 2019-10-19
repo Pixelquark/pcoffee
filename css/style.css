@@ -297,6 +297,9 @@ html, body {
   text-align: left;
   width: 60%; }
 
+.postTable td:nth-child(3) {
+  letter-spacing: .05em; }
+
 .postTable th:nth-child(4),
 .postTable td:nth-child(4),
 .postTable th:nth-child(5),
@@ -309,7 +312,12 @@ html, body {
 
 .postTable td:nth-child(6) a {
   text-decoration: none;
-  color: blue; }
+  color: blue;
+  font-weight: bold; }
+
+.postTable td:nth-child(6) a:hover {
+  color: #97BC97;
+  transition: all .3s ease; }
 
 @media all and (min-width: 1025px) {
   .logContainer {

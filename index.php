@@ -1,3 +1,15 @@
+<?php
+require 'includes\connection.php';
+require 'includes\works.php';
+
+$work = new Work;
+$works = $work->fetch_all();
+
+$user = new User;
+$users = $user->fetch_all();
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +26,8 @@
 <body>
 <div class="wrapper">
 
-  <?php require ('modules/header.php') ?>
-  <?php require ('modules/content.php') ?>
+  <?php include ('modules/header.php') ?>
+  <?php include ('modules/content.php') ?>
 
 </div><!-- Wrapper -->
 

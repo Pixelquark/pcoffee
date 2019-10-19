@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cuprum|Roboto+Slab|Ubuntu:300,400&display=swap");
+* {
+  box-sizing: border-box; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -251,7 +254,8 @@ html, body {
   font-weight: normal;
   font-family: 'Ubuntu', sans-serif;
   height: 16px;
-  padding-left: .3em; }
+  padding-left: .3em;
+  text-align: center; }
 
 .tableHeader:hover {
   color: #97BC97;
@@ -274,17 +278,38 @@ html, body {
   border-right: 1px;
   border-style: solid;
   border-color: #bbbbbb;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  font-family: 'Ubuntu', sans-serif; }
 
-#typeCell {
-  align-items: center;
+.postTable td:nth-child(1) {
+  font-weight: bold; }
+
+.postTable th:nth-child(1),
+.postTable td:nth-child(1) {
   text-align: center;
-  padding: 0; }
+  padding: 0;
+  width: 2.5%; }
 
-.tableCell > img {
-  margin-top: 3px;
-  height: 16px;
-  width: 16px; }
+.postTable th:nth-child(2) {
+  width: 7.5%; }
+
+.postTable th:nth-child(3) {
+  text-align: left;
+  width: 60%; }
+
+.postTable th:nth-child(4),
+.postTable td:nth-child(4),
+.postTable th:nth-child(5),
+.postTable td:nth-child(5),
+.postTable th:nth-child(6),
+.postTable td:nth-child(6) {
+  text-align: center;
+  width: 8%;
+  padding: 0 .3rem; }
+
+.postTable td:nth-child(6) a {
+  text-decoration: none;
+  color: blue; }
 
 @media all and (min-width: 1025px) {
   .logContainer {

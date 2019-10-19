@@ -8,22 +8,20 @@
       <tr class="tableRow rowHeader">
         <!-- for every postTag in DB -->
         <th class="tableHeader firstCell"><small>ID</small></th>
-        <th class="tableHeader"><small>Type</small></th>
+        <th class="tableHeader"><small>Date</small></th>
         <th class="tableHeader"><small>Summary</small></th>
         <th class="tableHeader"><small>Author</small></th>
         <th class="tableHeader"><small>Status</small></th>
-        <th class="tableHeader"><small>GitHub</small></th>
-        <th class="tableHeader lastCell"><small>Date</small></th>
+        <th class="tableHeader lastCell"><small>GitHub Link</small></th>
       </tr>
       <tr class="tableRow">
         <!-- for every postTag in DB -->
-        <td class="tableCell"><small>1006</small></td>
-        <td id="typeCell" class="tableCell"><img src=".\assets\icons\typeHard.png" alt=""></td>
-        <td class="tableCell">Short summary with a small description about the subject.</td>
-        <td class="tableCell">Erik Morelli</td>
-        <td class="tableCell">In progress</td>
-        <td class="tableCell"><a href="">1.0.3</a></td>
+        <td class="tableCell"><small>106</small></td>
         <td class="tableCell">14/10/2019</td>
+        <td class="tableCell">A simple calculator app done with vanilla JavaScript and CSS.</td>
+        <td class="tableCell">Erik Morelli</td>
+        <td class="tableCell">Finished</td>
+        <td class="tableCell"><a href="">Version 1.0.3</a></td>
       </tr>
   </table>
 

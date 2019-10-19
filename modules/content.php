@@ -3,10 +3,10 @@
 <div class="contentContainer">
 
   <!-- LOOP START -->
-  <!-- for every postTag in DB -->
   <div class="postContainer">
     <table class="postTable">
       <tr class="tableRow rowHeader">
+        <!-- for every postTag in DB -->
         <th class="tableHeader firstCell"><small>ID</small></th>
         <th class="tableHeader"><small>Type</small></th>
         <th class="tableHeader"><small>Summary</small></th>
@@ -16,8 +16,9 @@
         <th class="tableHeader lastCell"><small>Date</small></th>
       </tr>
       <tr class="tableRow">
-        <td class="tableCell">1006</td>
-        <td id="typeCell" class="tableCell"><img src=".\assets\icons\typeWeb.png" alt=""></td>
+        <!-- for every postTag in DB -->
+        <td class="tableCell"><small>1006</small></td>
+        <td id="typeCell" class="tableCell"><img src=".\assets\icons\typeHard.png" alt=""></td>
         <td class="tableCell">Short summary with a small description about the subject.</td>
         <td class="tableCell">Erik Morelli</td>
         <td class="tableCell">In progress</td>

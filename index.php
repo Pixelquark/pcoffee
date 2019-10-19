@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="favicon.png">
 
-  <title>pyCode - Community for webdevelopers in Barcelona</title>
+  <title>pQuark - Community for webdevelopers in Barcelona</title>
 </head>
 <body>
 <div class="wrapper">

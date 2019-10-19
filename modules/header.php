@@ -11,7 +11,7 @@
 
       <div class="logoSlogan">
         <a href="index.php">
-          <span id="slogan"><span id="sloganH">py</span>Code</span>
+          <span id="slogan"><span id="sloganH">pixel</span>Quark</span>
         </a>
       </div>
     </div>
@@ -38,7 +38,7 @@
 
     </div>
     <div id="menuContainer">
-      <a href="#"><img src="assets/menu1.png" alt=""></a>
+      <a href="#"><img src="assets/menu.png" alt=""></a>
     </div>
 
   </div>

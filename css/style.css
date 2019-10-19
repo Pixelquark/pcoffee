@@ -235,7 +235,8 @@ html, body {
   background-color: #EBECED; }
 
 .tableRow {
-  height: 25px; }
+  height: 25px;
+  text-align: left; }
 
 .rowHeader {
   background: #d1d1d1;
@@ -249,7 +250,8 @@ html, body {
   border-color: #bbbbbb;
   font-weight: normal;
   font-family: 'Ubuntu', sans-serif;
-  height: 16px; }
+  height: 16px;
+  padding-left: .3em; }
 
 .tableHeader:hover {
   color: #97BC97;
@@ -264,18 +266,25 @@ html, body {
 
 .tableCell {
   font-size: .8em;
-  height: 20px; }
+  height: 20px;
+  padding-left: .3em;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
+  border-collapse: collapse; }
 
 #typeCell {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: .15em; }
+  text-align: center;
+  padding: 0; }
 
 .tableCell > img {
-  align-self: center;
-  height: 15px;
-  width: 15px; }
+  margin-top: 3px;
+  height: 16px;
+  width: 16px; }
 
 @media all and (min-width: 1025px) {
   .logContainer {

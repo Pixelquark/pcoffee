@@ -9,7 +9,25 @@
           <th class="tableHeader"><small>Date</small></th>
           <th class="tableHeader"><small>Summary</small></th>
           <th class="tableHeader"><small>Author</small></th>
-          <th class="tableHeader"><small>Status</small></th>
+          <?php if (isset($_SESSION['loggedin'])){ ?>
+          <th class="tableHeader">
+            <form class="" action="index.html" method="post">
+              <button type="button" name="button">
+                <img src="assets/addpost.png" alt="">
+              </button>
+              <button type="button" name="button">
+                <img src="assets/editpost.png" alt="">
+              </button>
+              <button type="button" name="button">
+                <img src="assets/sortpost.png" alt="">
+              </button>
+              <button type="button" name="button">
+                <img src="assets/registeruser.png" alt="">
+              </button>
+            </form>
+          </th>
+          <?php }?>
+          <!-- <th class="tableHeader"><small>Status</small></th> -->
           <th class="tableHeader lastCell"><small>GitHub Link</small></th>
       </tr>
       <!-- for every postTag in DB -->
@@ -18,14 +36,19 @@
           <td class="tableCell"><small><?php echo $work['w_id'] ?></small></td>
           <td class="tableCell"><?php echo date('d/m/Y', $work['w_date']) ?></td>
           <td class="tableCell"><?php echo $work['w_summary'] ?></td>
-          <td class="tableCell"><?php echo $work['w_author'] ?></td>
+          <td class="tableCell"><small><?php echo $work['w_author'] ?></small></td>
+          <?php if (isset($_SESSION['loggedin'])){ ?>
           <td class="tableCell">
-            <?php
-                    if($work['w_status'] == 1){ echo 'in Progress';}
-               else if($work['w_status'] == 2){ echo 'Finished';}
-                                         else { echo 'Canceled';}
-             ?>
-           </td>
+            <form class="" action="index.html" method="post">
+              <button type="button" name="button">
+                <img src="assets/editpost.png" alt="">
+              </button>
+              <button type="button" name="button">
+                <img src="assets/removepost.png" alt="">
+              </button>
+            </form>
+          </td>
+          <?php }?>
           <td class="tableCell"><a href="<?php echo $work['w_git'] ?>" target="_blank">See github</a></td>
         </tr>
     <?php } ?>

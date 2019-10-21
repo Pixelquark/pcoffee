@@ -296,6 +296,26 @@ html, body {
   padding-left: .3em;
   text-align: center; }
 
+.tableHeader form {
+  margin: 0;
+  padding: 0;
+  display: inline-flex; }
+
+.tableHeader button {
+  height: 19px;
+  width: 19px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 .1em;
+  padding: 0; }
+
+.tableHeader img {
+  height: 100%;
+  width: 100%;
+  padding: 0; }
+
 .tableHeader:hover {
   color: #97BC97;
   transition: all .3s ease;
@@ -320,6 +340,26 @@ html, body {
   border-collapse: collapse;
   font-family: 'Ubuntu', sans-serif; }
 
+.tableCell form {
+  margin: 0;
+  padding: 0;
+  display: inline-flex; }
+
+.tableCell button {
+  height: 19px;
+  width: 19px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 .1em;
+  padding: 0; }
+
+.tableCell img {
+  height: 100%;
+  width: 100%;
+  padding: 0; }
+
 .postTable td:nth-child(1) {
   font-weight: bold; }
 
@@ -334,7 +374,7 @@ html, body {
 
 .postTable th:nth-child(3) {
   text-align: left;
-  width: 60%; }
+  width: 65%; }
 
 .postTable th:nth-child(4),
 .postTable td:nth-child(4),
@@ -343,14 +383,15 @@ html, body {
 .postTable th:nth-child(6),
 .postTable td:nth-child(6) {
   text-align: center;
-  width: 8%;
   padding: 0 .3rem; }
 
+.postTable td:nth-child(5) a,
 .postTable td:nth-child(6) a {
   text-decoration: none;
   color: blue;
   font-weight: bold; }
 
+.postTable td:nth-child(5) a:hover,
 .postTable td:nth-child(6) a:hover {
   color: #97BC97;
   transition: all .3s ease; }

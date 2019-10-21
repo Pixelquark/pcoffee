@@ -34,6 +34,7 @@ $works = $work->fetch_all();
   <?php include ('modules/header.php') ?>
   <?php include ('modules/banner.php') ?>
   <?php include ('modules/content.php') ?>
+  <?php include ('modules/footer.php') ?>
 
 </div><!-- Wrapper -->
 

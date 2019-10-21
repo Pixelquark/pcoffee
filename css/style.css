@@ -24,6 +24,7 @@ html, body {
 .headerContainer {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #3d3e40;
   background-color: #323334;
   color: #EBECED;
   width: 100%;
@@ -388,7 +389,7 @@ html, body {
 .postTable td:nth-child(5) a,
 .postTable td:nth-child(6) a {
   text-decoration: none;
-  color: blue;
+  color: #3b99d4;
   font-weight: bold; }
 
 .postTable td:nth-child(5) a:hover,
@@ -403,7 +404,100 @@ html, body {
   box-sizing: content-box;
   width: 100%;
   min-height: 300px;
-  background-image: url("../assets/banner.png"); }
+  background-color: #97BC97; }
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 48px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  background-color: #323334; }
+
+.footerInnerContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; }
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1em;
+  margin: 0 1em;
+  width: 1024px; }
+
+.logoSloganF {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 32px;
+  margin: .5em .8em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300; }
+
+#sloganF {
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: bold;
+  color: #97BC97; }
+
+#sloganHF {
+  font-weight: lighter;
+  color: #EBECED; }
+
+.socialFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  margin: 0 0 .5em 0; }
+
+.socialFooter a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  margin: 0 .3em; }
+
+.socialFooter img {
+  height: 16px;
+  width: 16px; }
+
+.contactFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  margin: 0 0 .5em 0; }
+
+.contactFooter p {
+  margin: 0;
+  padding: .3em; }
+
+.infoFooter {
+  display: flex;
+  height: 30px;
+  padding: .3em; }
+
+.cellFooter {
+  display: inline-flex;
+  align-items: center;
+  align-content: flex-end; }
+
+.cellFooter img {
+  height: 16px; }
+
+.cellFooter p {
+  margin-bottom: .3em; }
 
 @media all and (min-width: 1025px) {
   .logContainer {

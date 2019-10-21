@@ -19,7 +19,6 @@ html, body{
 
   background-color: white;
 
-  overflow-y: hidden;
   height: 100%;
 }
 .wrapper{
@@ -56,7 +55,7 @@ html, body{
   padding: 0;
 
   width: 1024px;
-  height: 32px;
+  min-height: 32px;
 }
 
 
@@ -163,7 +162,59 @@ html, body{
   // margin-left: auto;
   margin-right: 1em;
   padding: 0 .5em;
+
+  justify-content: center;
+  text-align: center;
 }
+.logContainer #errorMsg{
+    color: #f54242;
+    margin-right: 1.3em;
+
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.logContainer #userNameMsg{
+    color: $bgColor;
+
+    margin-right: 1.3em;
+    margin-top: .2em;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.logContainer #userNameLog{
+    color: $hColor;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.logContainer #logOutBut{
+  height: 23px;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+
+  border: 1px solid $bgColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+  color: $bgColor;
+
+  cursor: pointer;
+}
+.logContainer #logOutBut:hover{
+  border: 1px solid $hColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+
+
+  transition: all .3s ease;
+}
+
 .logContainer>a{
   text-decoration: none;
   color: $bgColor;
@@ -389,7 +440,7 @@ html, body{
   width: 60%;
 }
 .postTable td:nth-child(3){
-  // letter-spacing: .05em; 
+  // letter-spacing: .05em;
 }
 .postTable th:nth-child(4),
 .postTable td:nth-child(4),
@@ -411,9 +462,22 @@ html, body{
   color: $hColor;
   transition: all .3s ease;
 }
+// BANNER BANNER BANNER
+// BANNER BANNER BANNER
+// BANNER BANNER BANNER
 
+.bannerContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
+  box-sizing: content-box;
 
+  width: 100%;
+  min-height: 300px;
+
+  background-image: url('../assets/banner.png');
+}
 
 
 

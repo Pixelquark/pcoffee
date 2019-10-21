@@ -8,7 +8,6 @@ html, body {
   color: #EBECED;
   background-color: #EBECED;
   background-color: white;
-  overflow-y: hidden;
   height: 100%; }
 
 .wrapper {
@@ -37,7 +36,7 @@ html, body {
   margin: auto;
   padding: 0;
   width: 1024px;
-  height: 32px; }
+  min-height: 32px; }
 
 .logoContainer {
   display: flex;
@@ -118,7 +117,47 @@ html, body {
   display: flex;
   align-items: center;
   margin-right: 1em;
-  padding: 0 .5em; }
+  padding: 0 .5em;
+  justify-content: center;
+  text-align: center; }
+
+.logContainer #errorMsg {
+  color: #f54242;
+  margin-right: 1.3em;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif; }
+
+.logContainer #userNameMsg {
+  color: #EBECED;
+  margin-right: 1.3em;
+  margin-top: .2em;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; }
+
+.logContainer #userNameLog {
+  color: #97BC97;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; }
+
+.logContainer #logOutBut {
+  height: 23px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #EBECED;
+  border-radius: 3px;
+  background-color: #323334;
+  color: #EBECED;
+  cursor: pointer; }
+
+.logContainer #logOutBut:hover {
+  border: 1px solid #97BC97;
+  border-radius: 3px;
+  background-color: #323334;
+  transition: all .3s ease; }
 
 .logContainer > a {
   text-decoration: none;
@@ -315,6 +354,15 @@ html, body {
 .postTable td:nth-child(6) a:hover {
   color: #97BC97;
   transition: all .3s ease; }
+
+.bannerContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: content-box;
+  width: 100%;
+  min-height: 300px;
+  background-image: url("../assets/banner.png"); }
 
 @media all and (min-width: 1025px) {
   .logContainer {

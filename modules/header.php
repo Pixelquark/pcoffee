@@ -36,9 +36,9 @@
 
       <!-- if logged_in TRUE do this -->
       <div class="logContainer">
-          <p>Welcome, <?php echo $users[0][4] ?></p>
+          <small id="userNameMsg">Welcome, <span id="userNameLog"><?php echo $users[0][2] ?></span></small>
         <form class="" action="admin/logout.php" method="post">
-          <button type="submit" name="button" id="">Logout</button>
+          <button type="submit" name="button" id="logOutBut">Logout</button>
         </form>
       </div>
 
@@ -74,6 +74,7 @@
       }
       ?>
       <div class="logContainer">
+        <?php if (isset($error)){?><small id="errorMsg"><?php echo $error; ?></small><?php } ?>
         <form class="logForm" action="index.php" method="post">
           <input type="text" name="loginBar" placeholder="Login" autocomplete="off">
           <input type="password" name="pwdBar" placeholder="Password" autocomplete="off">

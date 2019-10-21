@@ -1,14 +1,19 @@
 <?php
-require 'includes\connection.php';
-require 'includes\works.php';
+session_start();
 
-$work = new Work;
-$works = $work->fetch_all();
+
+
+require_once __DIR__.'\includes\connection.php';
+require_once __DIR__.'\includes\works.php';
+
 
 $user = new User;
 $users = $user->fetch_all();
 
-session_start();
+
+$work = new Work;
+$works = $work->fetch_all();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

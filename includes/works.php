@@ -32,14 +32,16 @@ class User{
     return $query->fetchAll();
   }
 
-  public function fetch_data($user_id){
+  public function fetch_data($u_name, $u_pwd){
     global $pdo;
 
-    $query = $pdo->prepare("SELECT * FROM users WHERE user_id = ?");
-    $query->bindValue(1, $user_id);
+    $query = $pdo->prepare("SELECT * FROM users WHERE u_name = ? AND u_pwd = ?");
+    $query->bindValue(1, $u_name);
+    $query->bindValue(2, $u_pwd);
     $query->execute();
 
     return $query->fetch();
   }
+
 }
 ?>

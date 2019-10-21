@@ -297,9 +297,6 @@ html, body {
   text-align: left;
   width: 60%; }
 
-.postTable td:nth-child(3) {
-  letter-spacing: .05em; }
-
 .postTable th:nth-child(4),
 .postTable td:nth-child(4),
 .postTable th:nth-child(5),

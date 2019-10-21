@@ -7,7 +7,7 @@
     <div class="logoContainer">
       <a href="index.php">
         <div class="imgContainer">
-          <img id="logo" src="assets/logo.png">
+          <img id="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAACJklEQVRIie3V30tTYQDG8e/ZOdvZZlgjRrgot6VNbdqPmSsCh5C70hLSLq1uoj+puhKCLjJvkogsLzaSUnI11nSK6PqxwbK0Vs1t6TldRAs5Q1zmQtZzd87zvu8HzuF9X6i0CAB3A68GBEHoKweoqupgr899WQJQURpE0WAuB7y6mm8A0JUDK5Z/BksAiqKkP6RS5HK5bcVkWabasjtdgPO5/FRwdKQz8fb1tsL7D9Ti7z4/BZX4j3cu3Oytw1Qlbx9stVm0k0Udx864yGbyAOzdt+fvwYJO4OwFL00ep6azu2zEY0lUVQXgSKsTf98pBJ2wNVjSi5zr97G8mCYwPKnpW7x1RJ/PF56D90Ok3i3Rc6UDySD+GWyqkum92slMOM5kcFrTy0YDRpPM0vvP696Hn84SnZjj4jU/5l3G0uHuSz5mw3FiL+JF+0aPg1i4eDcbeUMstEBXf3vp8L2BAIeP2mk84SgOH3cQCy0U7eyuGppanTy4/aR0OJvJMXhjhPrmg3jaG9d1Fms1ma9Zsit5zTx3Wx1tHW7uXH/El0+Z0mGAtVWF4VtBLNZqfN2e34ufPERkYk4z/rS/hdr6GoZujpLPft9o6Z+XxEZRFZXHQ+OFfSwIAvYGG2MPw5qx89EEz5KRwvbaEvwri8llAIxmAy/HZlDWFM2YVOLjZpcr/chc+ZYjMq79zKVm514S/+HNRgLQS+K0v6tnphygXtJpD/6KyA86KquvX0zFrgAAAABJRU5ErkJggg==">
         </div>
       </a>
 
@@ -32,45 +32,49 @@
     </div>
 
 
-    <?php if ($_SESSION['logged_in'] == true) { ?>
+    <?php if (isset($_SESSION['loggedin'])) { ?>
 
       <!-- if logged_in TRUE do this -->
       <div class="logContainer">
-
-        <a href="#">Connected</a>
-
+          <p>Welcome, <?php echo $users[0][4] ?></p>
+        <form class="" action="admin/logout.php" method="post">
+          <button type="submit" name="button" id="">Logout</button>
+        </form>
       </div>
 
     <!-- if logged_in FALSE do this -->
     <?php } else {
+      if (isset($_POST['loginBar'], $_POST['pwdBar'])){
 
-      if(isset($_POST['loginBar'], $_POST['pwdBar'])){
         $username = $_POST['loginBar'];
         $password = $_POST['pwdBar'];
-        print_r($users[0][3]);
+
         $hash = password_hash($password, PASSWORD_BCRYPT);
+
+
 
         if(empty($username) or empty($password)){
               $error = 'All fields are required.';
           }else{
-              $query = $pdo->prepare("SELECT * FROM users WHERE u_name = ? AND u_pwd = ?");
+              $query = $pdo->prepare("SELECT * FROM users WHERE u_name = ?");
               $query->bindValue(1, $username);
-              $query->bindValue(2, $hash);
               $query->execute();
+              $u_pass = $query->fetch(PDO::FETCH_ASSOC);
 
-              if(password_verify($password, $users[0][3]) && $username == $users[0][1]){
-                $_SESSION['logged_in'] = true;
+                    if(password_verify($password, $u_pass['u_pwd']) && $username == $u_pass['u_name']){
+                      $_SESSION['loggedin'] = true;
+                      $_SESSION['username'] = $username;
 
-                header('Location: index.php');
-                exit();
-              }else{
-                    $error = 'Incorrect details.';
-                   }
+                      header('Location: index.php');
+                      exit();
+                    }else{
+                      $error = 'Incorrect details.';
+                    }
             }
       }
       ?>
       <div class="logContainer">
-        <form class="logForm" action="modules/header.php" method="post">
+        <form class="logForm" action="index.php" method="post">
           <input type="text" name="loginBar" placeholder="Login" autocomplete="off">
           <input type="password" name="pwdBar" placeholder="Password" autocomplete="off">
           <button type="submit" name="loginButton" id="logButton">

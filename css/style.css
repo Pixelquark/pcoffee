@@ -7,8 +7,7 @@ html, body {
   padding: 0;
   color: #EBECED;
   background-color: #EBECED;
-  background-color: white;
-  height: 100%; }
+  background-color: white; }
 
 .wrapper {
   display: flex;
@@ -248,8 +247,8 @@ html, body {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  max-height: 300px;
   margin: 0 1em;
   padding: 0;
   color: #323334;
@@ -408,13 +407,9 @@ html, body {
 
 .footerContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  min-height: 48px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: lighter;
   text-align: center;
@@ -435,11 +430,14 @@ html, body {
 
 .logoSloganF {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 32px;
-  margin: .5em .8em;
+  border-right: 2px groove #97BC97;
+  padding-right: .4em;
+  height: 30px;
+  margin: 0;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300; }
 
@@ -458,7 +456,7 @@ html, body {
   justify-content: center;
   align-items: center;
   font-size: 1em;
-  margin: 0 0 .5em 0; }
+  margin: 0; }
 
 .socialFooter a {
   display: flex;
@@ -474,14 +472,30 @@ html, body {
 
 .contactFooter {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1em;
   margin: 0 0 .5em 0; }
 
+.contactFooter h1, h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  font-size: 1em; }
+
 .contactFooter p {
   margin: 0;
   padding: .3em; }
+
+.under {
+  display: inline-flex; }
+
+.over {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: .8em .8em .3em .8em; }
 
 .infoFooter {
   display: flex;
@@ -498,6 +512,32 @@ html, body {
 
 .cellFooter p {
   margin-bottom: .3em; }
+
+.cardContainer {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter; }
+
+.cardInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1024px; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #323334;
+  border: 1px solid black;
+  width: 300px;
+  height: 350px;
+  margin: 2em 1em; }
 
 @media all and (min-width: 1025px) {
   .logContainer {

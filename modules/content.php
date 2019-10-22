@@ -1,4 +1,5 @@
 <?php ?>
+<?php if (isset($_SESSION['loggedin'])){ ?>
 <div class="contentContainer">
 
   <!-- LOOP START -->
@@ -9,7 +10,6 @@
           <th class="tableHeader"><small>Date</small></th>
           <th class="tableHeader"><small>Summary</small></th>
           <th class="tableHeader"><small>Author</small></th>
-          <?php if (isset($_SESSION['loggedin'])){ ?>
           <th class="tableHeader">
             <form class="" action="index.html" method="post">
               <button type="button" name="button">
@@ -26,7 +26,6 @@
               </button>
             </form>
           </th>
-          <?php }?>
           <!-- <th class="tableHeader"><small>Status</small></th> -->
           <th class="tableHeader lastCell"><small>GitHub Link</small></th>
       </tr>
@@ -59,4 +58,5 @@
 
 </div>
 
+<?php }?>
 <?php  ?>

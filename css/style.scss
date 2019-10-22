@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cuprum|Roboto+Slab|Ubuntu:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu:300,400&display=swap');
 // font-family: 'Ubuntu', sans-serif;
 // font-family: 'Cuprum', sans-serif;
 
@@ -191,7 +191,6 @@ html, body{
     color: $hColor;
 
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
 }
 .logContainer #logOutBut{
   height: 23px;
@@ -556,10 +555,10 @@ html, body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 1em;
+  padding: 0 .5em;
   margin: 0 1em;
 
-  width: 1024px;
+  max-width: 1024px;
 }
 
 .logoSloganF{
@@ -677,11 +676,11 @@ html, body{
   width: 100%;
 
   font-family: 'Ubuntu', sans-serif;
-  font-weight: lighter;
 }
 
 .cardInner{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
@@ -694,14 +693,69 @@ html, body{
   align-items: center;
 
   text-align: center;
+
   color: $mainColor;
 
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid $bgColor;
 
-  width: 300px;
-  height: 350px;
+  width: 280px;
+  height: 330px;
 
   margin: 2em 1em;
+}
+
+.cardThumb{
+  max-width: 100%;
+  max-height: 150px;
+
+  border-bottom: 1px solid $bgColor;
+
+  margin: 0;
+  padding: 0;
+}
+.cardThumb img{
+  width: 100%;
+  height: 100%;
+}
+.cardTitle{
+  width: 100%;
+  padding: .5em;
+}
+.cardTitle h1{
+  padding: 0;
+  margin: 0;
+
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.cardDescription{
+  width: 100%;
+  height: 100px;
+
+  padding: 0 .8em;
+  text-align: justify;
+}
+.cardButtonDiv{
+  width: 100%;
+  height: 40px;
+
+}
+#cardButton{
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  color: $bgColor;
+  background-color: $mainColor;
+}
+#cardButton:hover{
+  color: $mainColor;
+  background-color: $bgColor;
+
+  transition: all .4s ease;
 }
 
 
@@ -726,6 +780,9 @@ html, body{
   #menuContainer{
     display: flex;
     margin-right: 2em;
+  }
+  .contentContainer{
+    display:none;
   }
 }
 @media all and (max-width: 600px){

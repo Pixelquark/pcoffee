@@ -28,7 +28,7 @@
 
             <div class="infoFooter">
               <span class="cellFooter"><img src="assets/phone.png" alt=""></span>
-              <span class="cellFooter"><p><small>+34 722 68 92 88</small></p></span><br>
+              <span class="cellFooter"><p><small>722 689 288</small></p></span><br>
             </div>
         </div>
       </div>

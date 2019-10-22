@@ -1,5 +1,5 @@
 //Menu HEADER renponsivo INICIO
-// $('.logContainer').hide();
+$('.logContainer').hide();
 if($(window).width()<505){$('.navContainer').hide();  };
 
 $('#menuContainer').on('click', (function(){

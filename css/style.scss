@@ -331,7 +331,7 @@ html, body{
   width: 100%;
   max-height: 300px;
 
-  margin: 0 1em;
+  margin: 0;
   padding: 0;
 
   color: $mainColor;
@@ -345,7 +345,7 @@ html, body{
   align-items: flex-start;
   text-align: center;
 
-  margin: 1em 1em;
+  margin: 0 1em;
   padding: 0;
 
   width: 1024px;
@@ -516,7 +516,8 @@ html, body{
 
 .bannerContainer{
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   flex-direction: column;
 
   box-sizing: content-box;
@@ -524,8 +525,8 @@ html, body{
   width: 100%;
   min-height: 300px;
 
-  background-color: $hColor;
-  // background-image: url('../assets/banner.png');
+  background-color: white;
+  background-image: url('../assets/banner.jpg');
 }
 
 
@@ -742,22 +743,28 @@ html, body{
   height: 40px;
 
 }
-#cardButton{
+#cardButton, #cardButton a{
   width: 100%;
   height: 100%;
+
+  text-decoration: none;
 
   border: none;
 
   color: $bgColor;
   background-color: $mainColor;
 }
-#cardButton:hover{
+#cardButton a{
+  width: 100%;
+  height: 100%;
+}
+#cardButton:hover, #cardButton a:hover{
   color: $mainColor;
   background-color: $bgColor;
 
+  text-decoration: none;
   transition: all .4s ease;
 }
-
 
 
 

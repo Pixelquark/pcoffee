@@ -20,7 +20,7 @@
       </div>
 
       <div class="cardButtonDiv">
-        <button id="cardButton" type="button" name="button">Ver en GitHub</button>
+        <a href="<?php echo $work['w_git'] ?>" target="_blank"><button id="cardButton" type="button" name="button">Ver en GitHub</button></a>
       </div>
 
     </div>

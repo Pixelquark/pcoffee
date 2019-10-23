@@ -24,14 +24,13 @@ $works = $work->fetch_all();
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="favicon.png">
 
-  <title>pQuark - Community for webdevelopers in Barcelona</title>
+  <title>pQuark - Desarrollador fullStack</title>
 </head>
 <body>
 <div class="wrapper">
 
   <?php include ('modules/header.php') ?>
   <?php include ('modules/banner.php') ?>
-  <?php include ('modules/content.php') ?>
   <?php include ('modules/cards.php') ?>
   <?php include ('modules/footer.php') ?>
 

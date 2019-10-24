@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Ubuntu:300,400&display=swap");
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
   padding: 0;
   color: #EBECED;
   background-color: #EBECED;
-  background-color: white; }
+  background-color: white;
+}
 
 .wrapper {
   display: flex;
@@ -15,10 +17,12 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .innerContainer > a, .logoSlogan > a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .headerContainer {
   display: flex;
@@ -27,7 +31,8 @@ html, body {
   background-color: #323334;
   color: #EBECED;
   width: 100%;
-  min-height: 48px; }
+  min-height: 48px;
+}
 
 .innerContainer {
   display: flex;
@@ -36,13 +41,15 @@ html, body {
   margin: auto;
   padding: 0;
   width: 1024px;
-  min-height: 32px; }
+  min-height: 32px;
+}
 
 .logoContainer {
   display: flex;
   align-items: center;
   text-align: center;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 .imgContainer {
   display: flex;
@@ -53,93 +60,115 @@ html, body {
   width: 32px;
   background: white;
   border: 1px solid #EBECED;
-  border-radius: 3px 3px 3px 3px; }
+  border-radius: 3px 3px 3px 3px;
+}
 
 #logo {
   height: 16px;
   width: 16px;
   color: #323334;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: 1.3em;
   text-decoration: none;
   padding: 0;
-  margin: 0 auto 0 auto; }
+  margin: 0 auto 0 auto;
+}
 
 .logoSlogan {
   display: flex;
   align-items: center;
   text-align: center;
   height: 32px;
-  margin: auto .8em;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300; }
+  margin: auto 0.8em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
 
 #slogan {
   font-size: 1.3em;
-  color: #EBECED; }
+  color: #EBECED;
+}
 
 #sloganH {
   font-weight: bold;
-  color: #97BC97; }
+  color: #97BC97;
+}
+
+.sloganT {
+  color: #EBECED;
+}
+
+.sloganTH {
+  color: #97BC97;
+}
 
 .navContainer {
   display: flex;
   align-items: center;
   margin-right: 1em;
   height: 23px;
-  border-right: 2px solid #97BC97; }
+  border-right: 2px solid #97BC97;
+}
 
 .navContainer > ul {
   display: inline-flex;
   justify-content: center;
   list-style: none;
   height: 23px;
-  padding: 0 1em; }
+  padding: 0 1em;
+}
 
 .navContainer > ul > li {
   justify-content: space-around;
-  margin: auto .5em; }
+  margin: auto 0.5em;
+}
 
 .navContainer > ul > li > a {
   color: #EBECED;
   font-weight: lighter;
-  font-family: 'Ubuntu', sans-serif;
-  text-decoration: none; }
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
 
 .navContainer > ul > li > a:hover {
   color: #97BC97;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   border-bottom: 3px solid #97BC97;
-  transition: all .3s ease; }
+  transition: all 0.3s ease;
+}
 
 .logContainer {
   display: flex;
   align-items: center;
   margin-right: 1em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+}
 
 .logContainer #errorMsg {
   color: #f54242;
   margin-right: 1.3em;
   text-align: center;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+}
 
 .logContainer #userNameMsg {
   color: #EBECED;
   margin-right: 1.3em;
-  margin-top: .2em;
+  margin-top: 0.2em;
   padding: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif;
+}
 
 .logContainer #userNameLog {
   color: #97BC97;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif;
+}
 
 .logContainer #logOutBut {
   height: 23px;
@@ -150,48 +179,56 @@ html, body {
   border-radius: 3px;
   background-color: #323334;
   color: #EBECED;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .logContainer #logOutBut:hover {
   border: 1px solid #97BC97;
   border-radius: 3px;
   background-color: #323334;
-  transition: all .3s ease; }
+  transition: all 0.3s ease;
+}
 
 .logContainer > a {
   text-decoration: none;
   color: #EBECED;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif;
+}
 
 .logForm {
   display: flex;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
-.logForm > input[name="loginBar"],
-.logForm > input[name="pwdBar"] {
+.logForm > input[name=loginBar],
+.logForm > input[name=pwdBar] {
   border: 3px solid #EBECED;
   border-radius: 3px;
   background-color: #EBECED;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   width: 80px;
   margin: auto 1em auto auto;
   text-align: center;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif;
+}
 
-.logForm > input[name="loginBar"]:focus,
-.logForm > input[name="pwdBar"]:focus {
+.logForm > input[name=loginBar]:focus,
+.logForm > input[name=pwdBar]:focus {
   outline: none;
   border-color: #97BC97;
-  transition: border-color 1s ease; }
+  transition: border-color 1s ease;
+}
 
-.logForm > input[name="loginBar"]:focus {
+.logForm > input[name=loginBar]:focus {
   width: 100px;
-  transition: width .5s ease; }
+  transition: width 0.5s ease;
+}
 
-.logForm > input[name="pwdBar"]:focus {
+.logForm > input[name=pwdBar]:focus {
   width: 120px;
-  transition: width .5s ease; }
+  transition: width 0.5s ease;
+}
 
 #logButton {
   height: 23px;
@@ -201,57 +238,68 @@ html, body {
   border: 1px solid #EBECED;
   border-radius: 3px;
   background-color: #323334;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 #logButton > img {
   height: 16px;
   width: 16px;
-  margin-top: 2px; }
+  margin-top: 2px;
+}
 
 #logButton > span {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #EBECED;
-  margin-right: .3em; }
+  margin-right: 0.3em;
+}
 
 #logButton:hover {
   border: 1px solid #97BC97;
   border-radius: 3px;
   background-color: #323334;
   color: #97BC97;
-  transition: all .3s ease; }
+  transition: all 0.3s ease;
+}
 
 .menuContainerAniIn {
   transform: rotate(360deg);
-  transition: transform 1.5s ease; }
+  transition: transform 1.5s ease;
+}
 
 .menuContainerAniOut {
   transform: rotate(-360deg);
-  transition: transform 1.5s ease; }
+  transition: transform 1.5s ease;
+}
 
 #menuContainer {
   display: flex;
-  align-items: center; }
+  align-items: center;
+}
 
 #menuContainer > a {
   display: flex;
   align-self: center;
-  text-align: center; }
+  text-align: center;
+}
 
 #menuContainer > a > img {
   max-height: 23px;
-  max-width: 23px; }
+  max-width: 23px;
+}
 
 .contentContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
+  align-self: flex-end;
   width: 100%;
   max-height: 300px;
   margin: 0;
   padding: 0;
   color: #323334;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif;
+}
 
 .postContainer {
   display: flex;
@@ -265,7 +313,8 @@ html, body {
   height: auto;
   background-color: white;
   border: hidden;
-  border-radius: 6px 6px 0 0; }
+  border-radius: 6px 6px 0 0;
+}
 
 .postTable {
   width: 100%;
@@ -273,15 +322,18 @@ html, body {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-collapse: collapse;
-  background-color: #EBECED; }
+  background-color: #EBECED;
+}
 
 .tableRow {
   height: 25px;
-  text-align: left; }
+  text-align: left;
+}
 
 .rowHeader {
   background: #d1d1d1;
-  color: #323334; }
+  color: #323334;
+}
 
 .tableHeader {
   border-bottom: 1px;
@@ -290,15 +342,17 @@ html, body {
   border-style: solid;
   border-color: #bbbbbb;
   font-weight: normal;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   height: 16px;
-  padding-left: .3em;
-  text-align: center; }
+  padding-left: 0.3em;
+  text-align: center;
+}
 
 .tableHeader form {
   margin: 0;
   padding: 0;
-  display: inline-flex; }
+  display: inline-flex;
+}
 
 .tableHeader button {
   height: 19px;
@@ -307,29 +361,34 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 .1em;
-  padding: 0; }
+  margin: 0 0.1em;
+  padding: 0;
+}
 
 .tableHeader img {
   height: 100%;
   width: 100%;
-  padding: 0; }
+  padding: 0;
+}
 
 .tableHeader:hover {
   color: #97BC97;
-  transition: all .3s ease;
-  cursor: pointer; }
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
 .firstCell {
-  border-top-left-radius: 6px; }
+  border-top-left-radius: 6px;
+}
 
 .lastCell {
-  border-top-right-radius: 6px; }
+  border-top-right-radius: 6px;
+}
 
 .tableCell {
-  font-size: .8em;
+  font-size: 0.8em;
   height: 20px;
-  padding-left: .3em;
+  padding-left: 0.3em;
   border-top: 1px;
   border-bottom: 1px;
   border-left: 1px;
@@ -337,12 +396,14 @@ html, body {
   border-style: solid;
   border-color: #bbbbbb;
   border-collapse: collapse;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+}
 
 .tableCell form {
   margin: 0;
   padding: 0;
-  display: inline-flex; }
+  display: inline-flex;
+}
 
 .tableCell button {
   height: 19px;
@@ -351,29 +412,35 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 .1em;
-  padding: 0; }
+  margin: 0 0.1em;
+  padding: 0;
+}
 
 .tableCell img {
   height: 100%;
   width: 100%;
-  padding: 0; }
+  padding: 0;
+}
 
 .postTable td:nth-child(1) {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .postTable th:nth-child(1),
 .postTable td:nth-child(1) {
   text-align: center;
   padding: 0;
-  width: 2.5%; }
+  width: 2.5%;
+}
 
 .postTable th:nth-child(2) {
-  width: 7.5%; }
+  width: 7.5%;
+}
 
 .postTable th:nth-child(3) {
   text-align: left;
-  width: 65%; }
+  width: 65%;
+}
 
 .postTable th:nth-child(4),
 .postTable td:nth-child(4),
@@ -382,52 +449,82 @@ html, body {
 .postTable th:nth-child(6),
 .postTable td:nth-child(6) {
   text-align: center;
-  padding: 0 .3rem; }
+  padding: 0 0.3rem;
+}
 
 .postTable td:nth-child(5) a,
 .postTable td:nth-child(6) a {
   text-decoration: none;
   color: #3b99d4;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .postTable td:nth-child(5) a:hover,
 .postTable td:nth-child(6) a:hover {
   color: #97BC97;
-  transition: all .3s ease; }
+  transition: all 0.3s ease;
+}
 
 .bannerContainer {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
   flex-direction: column;
   box-sizing: content-box;
   width: 100%;
   min-height: 300px;
   background-color: white;
-  background-image: url("../assets/banner.jpg"); }
+  background-image: url("../assets/banner.jpg");
+}
+
+.bannerMessage {
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.bannerMessage h1, h3 {
+  font-size: 1.5em;
+  margin: 0.3em 0 0 0;
+}
+
+.bannerMessage h3 {
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: normal;
+}
+
+.bannerMessage p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+}
 
 .footerContainer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   width: 100%;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: lighter;
   text-align: center;
-  background-color: #323334; }
+  background-color: #323334;
+}
 
 .footerInnerContainer {
   display: inline-flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .aboutContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   margin: 0 1em;
-  max-width: 1024px; }
+  max-width: 1024px;
+}
 
 .logoSloganF {
   display: flex;
@@ -436,28 +533,32 @@ html, body {
   justify-content: center;
   text-align: center;
   border-right: 2px groove #97BC97;
-  padding-right: .4em;
+  padding-right: 0.4em;
   height: 30px;
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300; }
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
 
 #sloganF {
   font-size: 1.3em;
   text-align: center;
   font-weight: bold;
-  color: #97BC97; }
+  color: #97BC97;
+}
 
 #sloganHF {
   font-weight: lighter;
-  color: #EBECED; }
+  color: #EBECED;
+}
 
 .socialFooter {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1em;
-  margin: 0; }
+  margin: 0;
+}
 
 .socialFooter a {
   display: flex;
@@ -465,11 +566,13 @@ html, body {
   justify-content: center;
   height: 20px;
   width: 20px;
-  margin: 0 .3em; }
+  margin: 0 0.3em;
+}
 
 .socialFooter img {
   height: 16px;
-  width: 16px; }
+  width: 16px;
+}
 
 .contactFooter {
   display: flex;
@@ -477,42 +580,51 @@ html, body {
   justify-content: center;
   align-items: center;
   font-size: 1em;
-  margin: 0 0 .5em 0; }
+  margin: 0 0 0.5em 0;
+}
 
 .contactFooter h1, h2 {
   margin: 0;
   padding: 0;
   font-weight: lighter;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 .contactFooter p {
   margin: 0;
-  padding: .3em; }
+  padding: 0.3em;
+}
 
 .under {
-  display: inline-flex; }
+  display: inline-flex;
+}
 
 .over {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: .8em .8em .3em .8em; }
+  margin: 0.8em 0.8em 0.3em 0.8em;
+}
 
 .infoFooter {
   display: flex;
   height: 30px;
-  padding: .3em; }
+  padding: 0.3em;
+}
 
 .cellFooter {
   display: inline-flex;
   align-items: center;
-  align-content: flex-end; }
+  align-content: flex-end;
+}
 
 .cellFooter img {
-  height: 16px; }
+  height: 16px;
+}
 
 .cellFooter p {
-  margin-bottom: .3em; }
+  margin-bottom: 0.3em;
+}
 
 .cardContainer {
   box-sizing: border-box;
@@ -520,14 +632,16 @@ html, body {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+}
 
 .cardInner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 1024px; }
+  width: 1024px;
+}
 
 .card {
   display: flex;
@@ -539,38 +653,45 @@ html, body {
   border: 1px solid #EBECED;
   width: 280px;
   height: 330px;
-  margin: 2em 1em; }
+  margin: 2em 1em;
+}
 
 .cardThumb {
   max-width: 100%;
   max-height: 150px;
   border-bottom: 1px solid #EBECED;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .cardThumb img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .cardTitle {
   width: 100%;
-  padding: .5em; }
+  padding: 0.5em;
+}
 
 .cardTitle h1 {
   padding: 0;
   margin: 0;
   font-size: 1.3em;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .cardDescription {
   width: 100%;
   height: 100px;
-  padding: 0 .8em;
-  text-align: justify; }
+  padding: 0 0.8em;
+  text-align: justify;
+}
 
 .cardButtonDiv {
   width: 100%;
-  height: 40px; }
+  height: 40px;
+}
 
 #cardButton, #cardButton a {
   width: 100%;
@@ -578,46 +699,70 @@ html, body {
   text-decoration: none;
   border: none;
   color: #EBECED;
-  background-color: #323334; }
+  background-color: #323334;
+}
 
 #cardButton a {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 #cardButton:hover, #cardButton a:hover {
   color: #323334;
   background-color: #EBECED;
   text-decoration: none;
-  transition: all .4s ease; }
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+#cardButton:focus, #cardButton a:focus {
+  outline: none;
+}
 
 @media all and (min-width: 1025px) {
   .logContainer {
-    display: flex; } }
+    display: flex;
+  }
+}
 @media all and (max-width: 1024px) {
   .logContainer {
-    display: none; }
+    display: none;
+  }
 
   .logoContainer {
-    margin-left: 2em; }
+    margin-left: 2em;
+  }
+
+  .bannerContainer {
+    display: none;
+  }
 
   #menuContainer {
     display: flex;
-    margin-right: 2em; }
+    margin-right: 2em;
+  }
 
   .contentContainer {
-    display: none; } }
+    display: none;
+  }
+}
 @media all and (max-width: 600px) {
   .navContainer {
-    display: flex; }
+    display: flex;
+  }
 
   .logContainer, .navContainer {
-    display: none; }
+    display: none;
+  }
 
   .logoContainer {
-    margin-left: 1em; }
+    margin-left: 1em;
+  }
 
   #menuContainer {
     display: flex;
-    margin-right: 1em; } }
+    margin-right: 1em;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

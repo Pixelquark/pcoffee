@@ -24,8 +24,8 @@
     <!--           -->
     <div class="navContainer">
       <ul>
-        <li><a href="<?php echo $users[0]['u_linked'] ?>">Linkedin</a></li>
-        <li><a href="<?php echo $users[0]['u_git'] ?>">Github</a></li>
+        <li><a href="<?php echo $users[0]['u_linked'] ?>" target="_blank">Linkedin</a></li>
+        <li><a href="<?php echo $users[0]['u_git'] ?>" target="_blank">Github</a></li>
         <li><a href="<?php echo $users[0]['u_facebook'] ?>" target="_blank">Sobre mi</a></li>
       </ul>
     </div>

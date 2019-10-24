@@ -15,12 +15,9 @@
               <button type="button" name="button">
                 <img src="assets/addpost.png" alt="">
               </button>
-              <button type="button" name="button">
+              <!-- <button type="button" name="button">
                 <img src="assets/editpost.png" alt="">
-              </button>
-              <button type="button" name="button">
-                <img src="assets/sortpost.png" alt="">
-              </button>
+              </button> -->
               <button type="button" name="button">
                 <img src="assets/registeruser.png" alt="">
               </button>
@@ -32,19 +29,21 @@
       <!-- for every postTag in DB -->
       <?php foreach ($works as $work) { ?>
         <tr class="tableRow">
-          <td class="tableCell"><small><?php echo $work['w_id'] ?></small></td>
+          <td id="<?php echo $work['w_id'] ?>" class="tableCell"><small><?php echo $work['w_id'] ?></small></td>
           <td class="tableCell"><?php echo date('d/m/Y', $work['w_date']) ?></td>
           <td class="tableCell"><?php echo $work['w_summary'] ?></td>
           <td class="tableCell"><small><?php echo $work['w_author'] ?></small></td>
           <?php if (isset($_SESSION['loggedin'])){ ?>
           <td class="tableCell">
             <form class="" action="index.html" method="post">
-              <button type="button" name="button">
+              <!-- <button type="button" name="button">
                 <img src="assets/editpost.png" alt="">
-              </button>
-              <button type="button" name="button">
-                <img src="assets/removepost.png" alt="">
-              </button>
+              </button> -->
+              <a href="#">
+                <button type="button" name="button">
+                  <img src="assets/removepost.png" alt="">
+                </button>
+              </a>
             </form>
           </td>
           <?php }?>
